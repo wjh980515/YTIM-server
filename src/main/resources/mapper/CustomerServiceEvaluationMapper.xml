@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.ytimserver.mapper.CustomerServiceEvaluationMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.ytimserver.pojo.CustomerServiceEvaluation">
+            <result property="id" column="id" jdbcType="BIGINT"/>
+            <result property="serverId" column="server_id" jdbcType="VARCHAR"/>
+            <result property="serverName" column="server_name" jdbcType="VARCHAR"/>
+            <result property="customerName" column="customer_name" jdbcType="VARCHAR"/>
+            <result property="evaluateTime" column="evaluate_time" jdbcType="TIMESTAMP"/>
+            <result property="score" column="score" jdbcType="INTEGER"/>
+            <result property="serviceInfoId" column="service_info_id" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,server_id,server_name,
+        customer_name,evaluate_time,score,
+        service_info_id
+    </sql>
+</mapper>
